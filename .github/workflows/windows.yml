@@ -1,0 +1,19 @@
+name: Eseguibile Windows
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv run lolpick-update
+      - run: uv run --with pyinstaller python packaging/build.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lolpick-windows
+          path: dist/lolpick/

@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+reports/
+build/
+dist/
+.DS_Store
+.claude/
+# statistiche di Lolalytics e U.GG: si generano con lolpick-update, non si ridistribuiscono
+lolpick/data/meta.json
+lolpick/data/matchups.json
+lolpick/data/laning.json
+lolpick/data/*.numbers
+lolpick/data/*.tmp

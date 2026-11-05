@@ -1,0 +1,18 @@
+[project]
+name = "lolpick"
+version = "0.1.0"
+description = "Assistente per la champ select di League of Legends: analisi delle composizioni, suggerimenti di pick e gameplan con un LLM locale (Ollama)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "rich>=13.7",
+]
+
+[project.scripts]
+lolpick = "lolpick.app:main"
+lolpick-update = "lolpick.update:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
