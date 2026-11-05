@@ -18,7 +18,7 @@ uv run lolpick --demo       # champ select simulata, senza client
 uv run lolpick --analyze "Ornn:tp+flash,Viego:smite+flash,Ahri:ignite+flash,Jinx:heal+flash,Thresh:ignite+flash" "Jayce,Lee Sin,Xerath,Ezreal,Karma" --role jungle
 ```
 
-Tier list, matchup e fase di lane non sono nel repository: dopo aver clonato il progetto vanno scaricati con `lolpick-update`. I dati della patch sono statici: l'app legge solo i file in `lolpick/data/`, e li aggiorna solo `lolpick-update`. Lancialo a ogni nuova patch (ogni due settimane), o qualche giorno dopo per avere più partite. Se la tier list ha più di 14 giorni, l'app te lo ricorda all'avvio. Lo script mostra anche i campioni nuovi senza voti in `champions.csv`.
+Il repository include i dati della patch 16.21 (statistiche di Lolalytics e U.GG): `lolpick-update` li porta all'ultima patch. I dati della patch sono statici: l'app legge solo i file in `lolpick/data/`, e li aggiorna solo `lolpick-update`. Lancialo a ogni nuova patch (ogni due settimane), o qualche giorno dopo per avere più partite. Se la tier list ha più di 14 giorni, l'app te lo ricorda all'avvio. Lo script mostra anche i campioni nuovi senza voti in `champions.csv`.
 
 In `--analyze` entrambe le squadre vanno in ordine top, jungle, mid, adc, support. Le summoner sono facoltative e si scrivono dopo i due punti, in inglese o in italiano (`ignite`/`ustione`, `tp`, `exhaust`/`sfinimento`, ecc.).
 

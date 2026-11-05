@@ -12,6 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
       - run: uv run lolpick-update
+        continue-on-error: true  # se le fonti rifiutano la richiesta restano i dati del repository
       - run: uv run --with pyinstaller python packaging/build.py
       - uses: actions/upload-artifact@v4
         with:
